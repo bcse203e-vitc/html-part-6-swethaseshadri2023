@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="here"></p>
+    <script>
+         let a=prompt("Enter first value: ");
+         let b=prompt("Enter second value: ");
+         let c=prompt("Enter third value: ");
+         if(a>b && a>c){
+            document.getElementById("here").innerHTML="The greatest value is: "+a;
+         }else if(b>a &b>c){
+            document.getElementById("here").innerHTML="The greatest value is: "+b;
+         }else{
+            document.getElementById("here").innerHTML="The greatest value is: "+c;
+         }
+    </script>
+</body>
+</html>

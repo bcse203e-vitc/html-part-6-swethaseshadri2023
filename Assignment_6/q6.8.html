@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find GCD</title>
+</head>
+<body>
+    <h2>Find the Greatest Common Divisor (GCD)</h2>
+    <label>Enter first number: </label>
+    <input type="number" id="gcdA"><br><br>
+    <label>Enter second number: </label>
+    <input type="number" id="gcdB"><br><br>
+    <button onclick="findGCD()">Find GCD</button>
+    <p id="gcdResult"></p>
+
+    <script>
+        function findGCD() {
+            let a = parseInt(document.getElementById("gcdA").value);
+            let b = parseInt(document.getElementById("gcdB").value);
+            while (b) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            document.getElementById("gcdResult").innerHTML = "GCD: " + a;
+        }
+    </script>
+</body>
+</html>

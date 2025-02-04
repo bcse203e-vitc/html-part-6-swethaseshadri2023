@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="here"></p>
+    <script>
+        let a=prompt("Enter a number: ");
+        let result = 0;
+        let org=a;
+    while(a>0){
+    // Getting the rightmost digit
+    rightmost = a%10;
+    
+    result = result*10 + rightmost;
+    
+    // Removing the rightmost digit from the number
+    a = Math.floor(a/10);
+    if(org==result){
+        document.getElementById("here").innerHTML="The reversed string is a palindrome "+result;
+    }else{
+        document.getElementById("here").innerHTML="The reversed string is not a palindrome "+result;
+    }
+}
+    </script>
+</body>
+</html>

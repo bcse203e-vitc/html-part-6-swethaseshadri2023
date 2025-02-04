@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Smallest and Largest</title>
+</head>
+<body>
+    <h2>Find the Second Smallest and Second Largest Numbers</h2>
+    <label>Enter numbers (comma-separated): </label>
+    <input type="text" id="numArray"><br><br>
+    <button onclick="findSecondSmallestLargest()">Find</button>
+    <p id="secResult"></p>
+
+    <script>
+        function findSecondSmallestLargest() {
+            let arr = document.getElementById("numArray").value.split(',').map(Number);
+            let uniqueArr = [...new Set(arr)].sort((a, b) => a - b);
+            document.getElementById("secResult").innerHTML = "Second Smallest: " + uniqueArr[1] + ", Second Largest: " + uniqueArr[uniqueArr.length - 2];
+        }
+    </script>
+</body>
+</html>

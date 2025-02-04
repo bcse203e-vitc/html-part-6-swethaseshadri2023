@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find LCM</title>
+</head>
+<body>
+    <h2>Find the Least Common Multiple (LCM)</h2>
+    <label>Enter first number: </label>
+    <input type="number" id="lcmA"><br><br>
+    <label>Enter second number: </label>
+    <input type="number" id="lcmB"><br><br>
+    <button onclick="findLCM()">Find LCM</button>
+    <p id="lcmResult"></p>
+
+    <script>
+        function gcd(a, b) {
+            while (b) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+        function findLCM() {
+            let a = parseInt(document.getElementById("lcmA").value);
+            let b = parseInt(document.getElementById("lcmB").value);
+            let lcm = (a * b) / gcd(a, b);
+            document.getElementById("lcmResult").innerHTML = "LCM: " + lcm;
+        }
+    </script>
+</body>
+</html>

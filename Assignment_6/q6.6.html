@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="faren">Enter temperature in celsius</label>
+        <input type="text" id="cel">
+    
+    <button onclick="func()">Submit</button>
+    <p id="here"></p>
+    <script>
+        function func(){
+            let c=document.getElementById("cel").value;
+            let f=0;
+            f=(c*(9/5))+32;
+            document.getElementById("here").innerHTML="The fahrenheit is: "+f;
+        }
+    </script>
+</body>
+</html>

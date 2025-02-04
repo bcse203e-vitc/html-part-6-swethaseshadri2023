@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number Checker</title>
+</head>
+<body>
+    <h2>Check if a Number is an Armstrong Number</h2>
+    <label>Enter a number: </label>
+    <input type="number" id="armNum"><br><br>
+    <button onclick="checkArmstrong()">Check</button>
+    <p id="armResult"></p>
+
+    <script>
+        function checkArmstrong() {
+            let num = document.getElementById("armNum").value;
+            let sum = 0;
+            let digits = num.length;
+
+            for (let digit of num) {
+                sum += Math.pow(parseInt(digit), digits);
+            }
+
+            let result = (sum == num) ? "Yes, it's an Armstrong Number." : "No, it's not an Armstrong Number.";
+            document.getElementById("armResult").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
